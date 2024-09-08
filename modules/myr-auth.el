@@ -5,6 +5,7 @@
 ;; -- Use Emacs for Pinentry -----
 
 (use-package pinentry
+  :ensure nil
   :config
   (unless (or myr/is-term
               (eq system-type 'window-nt))

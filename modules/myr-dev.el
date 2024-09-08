@@ -44,8 +44,26 @@
       (remove-hook 'after-save-hook #'recompile t)
     (add-hook 'after-save-hook #'recompile nil t)))
 
-;; -- Project.el -----
-;; Native?
+;; -- Flycheck
+(use-package flycheck-posframe
+  :ensure nil
+  :demand t
+  :after flycheck
+  :hook (flycheck-mode . flycheck-posframe-mode)
+  :config
+  (flycheck-posframe-configure-pretty-defaults)
+  (set-face-attribute 'flycheck-posframe-error-face
+                      nil
+                      :inherit nil
+                      :foreground "red")
+  (set-face-attribute 'flycheck-posframe-info-face
+                      nil
+                      :foeground "blue")
+  (set-face-attribute 'flycheck-posframe-border-face
+                      nil
+                      :foreground "#DC752F")
+  (setq flycheck-posframe-LEVEL-prefix ""
+        flycheck-posframe-warning-prefix ""))
 
 ;; -- Eglot -----
 (use-package eglot

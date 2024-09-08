@@ -1,7 +1,6 @@
 ;;; -*- lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
-
 (use-package flyspell
   :hook (c-mode . flycheck-mode))
 

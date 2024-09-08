@@ -340,8 +340,6 @@ With optional argument FRAME, return the list of buffers of FRAME."
   :straight '(app-launcher :host github
                            :repo "SebastienWae/app-launcher"))
 
-
-
 ;; -- Start the Daemon -----
 (load "server")
 (unless (server-running-p)

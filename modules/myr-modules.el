@@ -7,7 +7,7 @@
 (defvar ui-modules
   '(:interface :dashboard))
 (defvar misc-modules
-  '(:org :social))
+  '(:org :spell :social))
 (defvar developer-modules
   '(:magit :dev)) ;;  ~ :spell.el
 
