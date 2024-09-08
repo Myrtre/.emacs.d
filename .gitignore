@@ -1,0 +1,8 @@
+# -*- mode: gitignore; -*-
+
+elpa/
+eln-cache/
+straight/
+auto-save/
+cache/
+eshell/
