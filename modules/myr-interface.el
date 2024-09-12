@@ -1,4 +1,4 @@
-;;; package --- Interface -*- mode: elisp; lexical-binding: t; -*-
+;;; myr-interface.el --- Interface -*- mode: elisp; lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 
@@ -164,6 +164,31 @@
   :straight t
   :hook
   (embark-collect-mode . consult-preview-at-point-mode))
+
+;; -- Theme --
+(use-package xterm-color
+  :ensure nil)
+
+
+(use-package doom-themes
+  :ensure nil
+  :config
+  (setq doom-themes-enable-bold t
+        doom-themes-enable-italic t)
+  (load-theme
+   (pcase (system-name)
+     ("jotunheim" 'doom-gruvbox)
+     (_ 'doom-monokai-pro))
+   t)
+  (add-hook 'after-init-hook
+            (lambda ()
+              (load-theme
+               (pcase (system-name)
+                 ("jotunheim" 'doom-gruvbox)
+                 (_ 'doom-monokai-pro))
+               t)))
+  (doom-themes-visual-bell-config)
+  (doom-themes-org-config))
 
 (provide 'myr-interface)
 ;;; myr-interface.el ends here
