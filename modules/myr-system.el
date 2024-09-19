@@ -1,4 +1,4 @@
-;;; package --- System -*- mode: elisp; lexical-binding: t; -*-
+;;; myr-system.el --- System (GUIX) configuration -*- mode: elisp; lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 

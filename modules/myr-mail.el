@@ -1,4 +1,7 @@
-;; -*- lexical-binding: t; -*-
+;;; myr-mail.el --- -*- lexical-binding: t; -*-
+;;; Commentary:
+;;; Code:
+
 (require 'myr-straight)
 
 ;; -- Mailing -----
@@ -110,3 +113,4 @@
 
 
 (provide 'myr-mail)
+;;; myr-mail.el ends here

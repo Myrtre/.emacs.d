@@ -1,4 +1,4 @@
-;;; package --- Core Settings -*- mode: elisp; lexical-binding: t; -*-
+;;; myr-core.el --- Core Settings -*- mode: elisp; lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 
@@ -29,11 +29,9 @@
 
 (setq inhibit-startup-message t)
 
-(unless myr/is-term
-  (scroll-bar-mode -1)
-  (tool-bar-mode -1)
-  (set-fringe-mode 10))
-
+(scroll-bar-mode -1)
+(tool-bar-mode -1)
+(set-fringe-mode 10)
 (menu-bar-mode -1)
 (global-hl-line-mode 1)
 (savehist-mode 1)
@@ -41,12 +39,11 @@
 
 (setq-default fill-column 80)
 (setq visible-bell t)
-(unless myr/is-term
-  (setq mouse-wheel-scrol-amount '(1 ((shift) . 1)))
-  (setq mouse-wheel-progressive-speed nil)
-  (setq mouse-wheel-follow-mode 't)
-  (setq scrool-step 1)
-  (setq use-dialog-box nil))
+(setq mouse-wheel-scrol-amount '(1 ((shift) . 1)))
+(setq mouse-wheel-progressive-speed nil)
+(setq mouse-wheel-follow-mode 't)
+(setq scrool-step 1)
+(setq use-dialog-box nil)
 
 (setq user-full-name "Davy Gút"
       user-mail-address "myrtre@proton.me"
@@ -111,18 +108,6 @@
 (setq vc-follow-symlink t)
 (setq ad-redefinition-action 'accept)
 
-;; Appearance
-(use-package doom-themes
-  :ensure nil
-  :config
-  (unless myr/is-term
-    (load-theme
-     (pcase system-name
-       ("jotunheim" 'doom-gruvbox)
-       (_ 'doom-palenight))
-     t)
-    (doom-themes-visual-bell-config)))
-
 ;; Set the font face based on platform
 (set-face-attribute 'default nil
 		            :font myr/default-font
@@ -151,7 +136,7 @@
   (set-face-attribute 'mode-line nil
 		              :box `(:line-width 2 :color ,(face-attribute 'mode-line :background)))
   (set-face-attribute 'mode-line-inactive nil
-		              :box `(:line-width 2 :color ,(face-attribure 'mode-line-inactive :background)))
+		              :box `(:line-width 2 :color ,(face-attribute 'mode-line-inactive :background)))
 
   ;; Fixed tab bar faces
   (set-face-attribute 'tab-bar nil :foreground (face-attribute 'mode-line :foreground))
@@ -335,7 +320,6 @@ With optional argument FRAME, return the list of buffers of FRAME."
 
 ;; -- App Launcher -----
 (use-package app-launcher
-  :straight t
   :demand t
   :straight '(app-launcher :host github
                            :repo "SebastienWae/app-launcher"))

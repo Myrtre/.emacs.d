@@ -1,4 +1,4 @@
-;;; package --- Developer Mode -*- mode: elisp; lexical-binding: t; -*-
+;;; myr-dev.el --- Developer Mode -*- mode: elisp; lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 
@@ -13,7 +13,12 @@
   :ensure nil
   :hook (org-mode
          emacs-lisp-mode
+         common-lisp-mode
+         scheme-mode
+         lua-mode
+         fennel-mode
          web-mode
+         css-mode
          typescript-mode
          js2-mode))
 
@@ -58,7 +63,7 @@
                       :foreground "red")
   (set-face-attribute 'flycheck-posframe-info-face
                       nil
-                      :foeground "blue")
+                      :foreground "blue")
   (set-face-attribute 'flycheck-posframe-border-face
                       nil
                       :foreground "#DC752F")
@@ -74,39 +79,20 @@
   :hook (((c-mode c++-mode) . eglot-ensure)
          ((js2-mode typescript-mode) . eglot-ensure)
          (rust-mode . eglot-ensure)
-         (scheme-mode . eglot-ensure)
-         (common-lisp-mode . eglot-ensure)
          (ruby-mode . eglot-ensure)
          (charp-mode . eglot-ensure))
 
   :config
   (setq eglot-autoshutdown t
-        eglot-confirm-server-initiated-edits nil)
-
-  (add-to-list 'eglot-server-programs
-               '((js2-mode typescript-mode) . ("typescript-language-server" "--stdio"))))
+        eglot-confirm-server-initiated-edits nil))
 
 ;; -- Code Formating ------
 (use-package apheleia
   :ensure nil
   :hook (prog-mode . apheleia-mode))
 
-(use-package lispy
-  :ensure nil
-  :disabled t
-  :hook (emacs-lisp-mode scheme-mode))
-
-(use-package lispyville
-  :ensure nil
-  :if (and (boundp 'evil) evil-mode)
-  :disabled t
-  :hook (lispy-mode . lispyville-mode)
-  :config
-  (lispyville-set-key-theme '(operators c-w additional
-                                        additional-movement slurp/barf-cp
-                                        prettify)))
-
 ;; LSP Serivces
+(add-to-list 'load-path "~/.emacs.d/modules/lsp/")
 (require 'myr-lsp)
 (provide 'myr-dev)
 

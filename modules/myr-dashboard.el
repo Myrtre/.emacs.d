@@ -1,4 +1,4 @@
-;;; pacakge --- Dashboard -*- mode: elisp; lexical-binding: t; -*-
+;;; myr-dashboard.el --- Dashboard -*- mode: elisp; lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 
@@ -78,7 +78,7 @@
   
   (setq dashboard-banner-logo-title banner-title ;(format "%s" "[ᛗ ᛃ ᚱ ᛏ ᚱ ᛖ  ᛖ ᛞ ᛁ ᛏ ᛟ ᚱ]")
         dashboard-image-banner-max-height 305
-        dashboard-startup-banner    "~/.emacs.d/themes/emacs_banner.xpm"
+        dashboard-startup-banner    "~/.emacs.d/bin/img/emacs_banner.xpm"
         dashboard-set-navigator     t
         dashboard-navigation-cycle  t
         dashboard-center-content    t

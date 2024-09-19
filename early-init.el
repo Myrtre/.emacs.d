@@ -1,4 +1,4 @@
-;;; package --- Early Init -*- lexical-binding: t; no-byte-compile: t; -*-
+;;; early-init.el --- * -*- lexical-binding: t; no-byte-compile: t; -*-
 ;;; Commentary:
 ;;; Code:
 

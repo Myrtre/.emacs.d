@@ -1,4 +1,4 @@
-;;; package -- Shell -*- mode: elisp; lexical-binding: t; -*-
+;;; myr-shell.el -- Emacs Shell Configuration -*- mode: elisp; lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 

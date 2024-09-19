@@ -1,4 +1,4 @@
-;;; package --- Setting Loader* -*- mode: elisp; lexical-binding: t; -*-
+;;; myr-settings.el --- Settings Loader -*- mode: elisp; lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 
@@ -17,7 +17,7 @@
 (defun myr/load-system-settings ()
   "Load default settings by hostname."
   (interactive)
-  (load-file "~/.dotfiles/.emacs.d/per-system-settings.el"))
+  (load-file "~/.dots/.emacs.d/per-system-settings.el"))
 
 (defun myr/reload-configuration ()
   "Reload emacs-configuration file..."

@@ -1,4 +1,4 @@
-;;; package --- File Manager -*- mode: elisp; lexical-binding: t; -*-
+;;; myr-dirvish.el --- File Manager -*- mode: elisp; lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 

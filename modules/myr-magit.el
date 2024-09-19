@@ -1,4 +1,4 @@
-;;; package --- Magit -*- mode: elisp; lexical-binding: t; -*-
+;;; MAgit --- Magit the better Git -*- mode: elisp; lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 

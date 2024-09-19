@@ -23,6 +23,7 @@
 (straight-use-package 'use-package)
 
 (use-package straight
+  :ensure nil
   :custom
   (straight-use-package-by-default t))
 

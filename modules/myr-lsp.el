@@ -157,8 +157,10 @@
 (use-package nginx-mode
   :commands nginx-mode)
 
+(use-package nix-mode
+  :straight t
+  :mode ("\\.nix\\'" . nix-mode))
 ;;; -- Web LSP Snippets -----
-
 (use-package web-mode
   :commands (web-mode)
   :mode
@@ -177,7 +179,6 @@
   :commands (lass-mode)
   :straight (:type git :repo "https://github.com/shinmera/LASS")
   :mode ("\\.lass\\'" . lass-mode))
-
 
 
 ;; -- Snippets -----

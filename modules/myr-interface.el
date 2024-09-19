@@ -45,11 +45,11 @@
   :ensure nil
   :after corfu
   :config
-  (add-to-list 'completion-at-point-function #'cape-file)
-  (add-to-list 'completion-at-point-function #'cape-dabbrev)
-  (add-to-list 'completion-at-point-function #'cape-keyword)
-  (addvice-add 'pcomplete-completions-at-point :around #'cape-wrap-silent)
-  (addvice-add 'pcomplete-completions-at-point :around #'cape-wrap-purify))
+  (add-to-list 'completion-at-point-functions #'cape-file)
+  (add-to-list 'completion-at-point-functions #'cape-dabbrev)
+  (add-to-list 'completion-at-point-functions #'cape-keyword)
+  (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-silent)
+  (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-purify))
 
 
 ;; -- Orderless -----

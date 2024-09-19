@@ -1,8 +1,7 @@
 ;;;; -*- mode: elisp; lexical-binding: t; -*-
 
-
+(setq inferior-lisp-program "/opt/sbcl/bin/sbcl")
 ;;; --- System identification -----
-
 (defvar myr/current-distro (or (and (eq system-type 'gnu/linux)
 				                    (file-exists-p "/etc/os-release")
 				                    (with-temp-buffer

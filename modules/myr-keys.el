@@ -1,4 +1,4 @@
-;;; package --- Keybinds -*- mode: elisp; lexical-binding: t; -*-
+;;; myr-keys.el --- Keybinds -*- mode: elisp; lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 

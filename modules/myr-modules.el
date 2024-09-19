@@ -7,20 +7,20 @@
 (defvar ui-modules
   '(:interface :dashboard))
 (defvar misc-modules
-  '(:org :spell :social))
+  '(:org :spell :mail :social))
 (defvar developer-modules
   '(:magit :dev)) ;;  ~ :spell.el
 
-;; TODOS: :mail , :spell, 
+;; TODOS: :mail , :spell
 (defvar myr/module-list
-  (cons* core-modules
-         ui-modules
-         misc-modules))
+  (append core-modules
+          ui-modules
+          misc-modules))
 (defvar myr/default-module-list
-  (cons* core-modules
-         ui-modules
-         misc-modules
-         developer-modules))
+  (append core-modules
+          ui-modules
+          misc-modules
+          developer-modules))
 
 ;; -- Load Modules -----
 (defcustom myr/modules (copy-sequence myr/default-module-list)

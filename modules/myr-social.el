@@ -1,4 +1,4 @@
-;;; package --- Social -*- mode: elisp; lexical-binding: t; -*-
+;;; myr-social.el --- Social stuffs -*- mode: elisp; lexical-binding: t; -*-
 ;;; Commentary:
 ;;; Code:
 

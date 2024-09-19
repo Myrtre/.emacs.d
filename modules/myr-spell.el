@@ -1,4 +1,7 @@
-;; -*- lexical-binding: t; -*-
+;;; myr-spell.el --- -*- lexical-binding: t; -*-
+;;; Commentary:
+;;; Code:
+
 (require 'myr-straight)
 
 ;; -- Spelling -----
@@ -27,3 +30,4 @@
 
 
 (provide 'myr-spell)
+;;; myr-spell.el ends here
