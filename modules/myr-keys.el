@@ -87,8 +87,8 @@
   "w c" '(evil-window-delete :wk "Close this window/frame")
   "w n" '(evil-window-vnew :wk "New window/frame")
   ;; Splits
-  "w s" '(evil-window-vsplit :wk "Split vertical")
-  "w S" '(evil-window-split :wk "Split horizontal")
+  "w s" '(evil-window-split :wk "Split horizontal")
+  "w S" '(evil-window-vsplit :wk "Split vertical")
   ;; Motions
   "w h" '(evil-window-left :wk "Focus left")
   "w j" '(evil-window-down :wk "Focus down")

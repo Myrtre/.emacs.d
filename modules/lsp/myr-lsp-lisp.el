@@ -34,12 +34,19 @@
 ;; -- Common lisp -----
 (use-package common-lisp-mode
   :straight (:type built-in)
+  :after sly
   :mode
   ("\\.lisp\\'" . common-lisp-mode)
   ("\\.asd\\'"  . common-lisp-mode)
-  ("\\.sexp\\'" . common-lisp-mode))
+  ("\\.sexp\\'" . common-lisp-mode)
+  :config
+  (add-hook 'common-lisp-mode-hook
+            (lambda ()
+              (sly-mode 1)
+              (corfu-mode 1))))
 
 ;; -- Slynk -----
+(setq inferior-lisp-program "/run/current-system/profile/bin/sbcl")
 (use-package sly
   :straight nil
   :init
